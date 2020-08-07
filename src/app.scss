@@ -1,0 +1,29 @@
+fieldset.usa-fieldset {
+    display: inline-flex;
+    flex-direction: column;
+    border: black 2px solid;
+    padding: 25px 50px;
+
+
+    button {
+        margin: 25px;
+        margin-top: 40px;
+    }
+
+    span.usa-hint {
+        align-self: flex-start;
+    }
+
+    div.usa-memorable-date {
+        div.usa-form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            label.usa-label {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+
+}
