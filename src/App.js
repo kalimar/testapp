@@ -5,6 +5,7 @@ import {
   DateInput,
   DateInputGroup,
   Fieldset,
+  Alert,
 } from "kalimarcomponents/dist";
 import "./app.scss";
 
@@ -41,10 +42,21 @@ function App() {
             minLength={4}
           />
         </DateInputGroup>
-        <FancyButton ariaLabel="submit" type="button">
+        <FancyButton disabled type="button">
           Save the Date
         </FancyButton>
       </Fieldset>
+      <Alert
+        type="warning"
+        heading="warning status"
+        cta={
+          <FancyButton type="button" outline>
+            Click to acknowledge
+          </FancyButton>
+        }
+      >
+        foo thing.
+      </Alert>
     </div>
   );
 }
