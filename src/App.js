@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import {
   Table,
@@ -11,6 +11,7 @@ import {
 import "./app.scss";
 
 function App() {
+  const [buttonDisabled, setButtonDisabled] = useState(false);
   return (
     <div className="App" style={{ width: 640, margin: "15px auto" }}>
       <Fieldset legend="Date of birth">
@@ -43,7 +44,16 @@ function App() {
             minLength={4}
           />
         </DateInputGroup>
-        <FancyButton disabled type="button">
+        <FancyButton
+          disabled={buttonDisabled}
+          type="button"
+          onClick={() => {
+            setButtonDisabled(true);
+            setTimeout(() => {
+              setButtonDisabled(false);
+            }, 4000);
+          }}
+        >
           Save the Date
         </FancyButton>
       </Fieldset>
